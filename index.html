@@ -3,113 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JL Soluções em TI - Desenvolvimento de Software, Sites para Pousadas e Automação Comercial em Aiuruoca e Sul de Minas.">
-    <title>JL Soluções em TI | Desenvolvimento de Software em Aiuruoca</title>
+    
+    <title>JL Soluções em TI | Criação de Sites e Sistemas em Aiuruoca e Região</title>
+    <meta name="description" content="Desenvolvimento de Software, Sites para Pousadas, Automação de Notas Fiscais e Consultoria de TI. Atendimento especializado em Aiuruoca, Caxambu, São Lourenço e Sul de Minas.">
+    <meta name="keywords" content="desenvolvimento de software, sites para pousadas, automação comercial, web designer aiuruoca, TI sul de minas, sistema para hotel, nota fiscal eletronica">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JL Soluções em TI">
+    
+    <link rel="canonical" href="https://seusite.netlify.app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JL Soluções em TI | Modernize seu Negócio no Sul de Minas">
+    <meta property="og:description" content="Sites de alta performance, automação comercial e consultoria para Pousadas e Empresas. Fale com um especialista.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+    <meta property="og:url" content="https://seusite.netlify.app/">
+    <meta property="og:locale" content="pt_BR">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
+        /* Estilo do Hero (Imagem de Fundo Escurecida) */
         .hero-bg {
-            background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.9)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Efeito Parallax suave */
         }
+        html { scroll-behavior: smooth; }
     </style>
-</head>
-<body class="font-sans text-gray-800 bg-gray-50">
 
-    <nav class="bg-white shadow-md fixed w-full z-10">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "JL Soluções em TI e Desenvolvimento de Software",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      "telephone": "+5532998417455",
+      "priceRange": "$$",
+      "url": "https://seusite.netlify.app/", 
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aiuruoca",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Aiuruoca" },
+        { "@type": "City", "name": "Caxambu" },
+        { "@type": "City", "name": "São Lourenço" },
+        { "@type": "City", "name": "Baependi" },
+        { "@type": "City", "name": "Itamonte" },
+        { "@type": "City", "name": "Cruzília" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/SEU_INSTAGRAM",
+        "https://www.linkedin.com/in/SEU_LINKEDIN"
+      ]
+    }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <div>
-                        <a href="#" class="flex items-center py-4 px-2">
-                            <span class="font-bold text-gray-800 text-lg md:text-xl"><i class="fas fa-code text-blue-600 mr-2"></i>JL Soluções</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="hidden md:flex items-center space-x-3">
-                    <a href="https://wa.me/5532998417455?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded transition duration-300">
-                        <i class="fab fa-whatsapp mr-2"></i>Falar no WhatsApp
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <i class="fas fa-code text-blue-600 text-2xl group-hover:rotate-12 transition-transform"></i>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-gray-900 text-xl tracking-tight leading-none">JL Soluções</span>
+                            <span class="text-xs text-gray-500 font-medium">TI e Software</span>
+                        </div>
                     </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#servicos" class="text-gray-600 hover:text-blue-600 font-medium transition">Serviços</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-blue-600 font-medium transition">Sobre</a>
+                    <a href="https://wa.me/5532998417455?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." 
+                       class="py-2.5 px-5 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                        <i class="fab fa-whatsapp mr-2"></i>Orçamento Rápido
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/5532998417455" class="text-green-500 text-2xl mr-4"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg h-screen flex items-center justify-center text-center px-4">
-        <div class="text-white max-w-3xl">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Tecnologia que impulsiona negócios no Sul de Minas</h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-300">Especialistas em Sites para Pousadas, Automação Comercial e Consultoria de TI em Aiuruoca e região.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5532998417455?text=Tenho%20interesse%20em%20um%20site%20ou%20sistema." class="py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-lg transition duration-300 shadow-lg">
-                    Solicitar Orçamento
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-20">
+        <div class="text-white max-w-4xl mx-auto animate-fade-in-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-600/30 border border-blue-400 text-blue-100 text-sm font-semibold mb-6 backdrop-blur-sm">
+                Atendendo Aiuruoca e Sul de Minas
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+                Tecnologia que <span class="text-blue-400">transforma</span> <br> negócios locais.
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto font-light">
+                Especialistas em desenvolvimento de sites para Pousadas, automação comercial e suporte de TI para quem quer crescer.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/5532998417455?text=Gostaria%20de%20saber%20mais%20sobre%20sites%20e%20sistemas." 
+                   class="w-full md:w-auto py-4 px-8 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-lg transition duration-300 shadow-lg hover:shadow-blue-500/50 flex justify-center items-center">
+                    <i class="fas fa-paper-plane mr-2"></i> Falar com Consultor
                 </a>
-                <a href="#servicos" class="py-3 px-8 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold rounded-lg text-lg transition duration-300">
-                    Nossos Serviços
+                <a href="#servicos" 
+                   class="w-full md:w-auto py-4 px-8 bg-white/10 border border-white/30 hover:bg-white/20 text-white font-semibold rounded-lg text-lg transition duration-300 backdrop-blur-sm">
+                    Ver Soluções
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="servicos" class="py-20 bg-white">
+    <section id="servicos" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Como podemos ajudar sua empresa?</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Soluções sob medida</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Não vendemos apenas software. Vendemos tempo livre e organização para sua empresa.</p>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-blue-500">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Sites & Web Design</h3>
-                    <p class="text-gray-600">Criação de sites modernos e rápidos, ideais para <strong>Pousadas e Turismo</strong>. Aumente suas reservas diretas e apareça no Google.</p>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Sites para Pousadas</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Websites rápidos, bonitos e otimizados para o Google. Aumente suas reservas diretas e mostre o melhor da sua hospedagem.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Design Responsivo</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Integração com WhatsApp</li>
+                    </ul>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-indigo-500">
-                    <div class="text-indigo-600 text-4xl mb-4"><i class="fas fa-file-invoice-dollar"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Automação Comercial</h3>
-                    <p class="text-gray-600">Esqueça as planilhas manuais. Implementamos sistemas de gestão e emissão de <strong>Notas Fiscais (NFS-e)</strong> para simplificar seu dia a dia.</p>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">MAIS PROCURADO</div>
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Automação e NF-e</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Elimine o caos das planilhas. Implementamos sistemas de gestão que emitem notas fiscais e controlam seu financeiro.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Emissão de NFS-e</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Controle de Estoque</li>
+                    </ul>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-teal-500">
-                    <div class="text-teal-600 text-4xl mb-4"><i class="fas fa-headset"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Consultoria de TI</h3>
-                    <p class="text-gray-600">Suporte técnico ágil e remoto. Ajudamos pequenos negócios a escolherem as ferramentas certas para crescer.</p>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Consultoria de TI</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Seu computador parou? A internet está lenta? Oferecemos suporte técnico especializado e consultoria para modernização.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Suporte Remoto Ágil</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Segurança de Dados</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Por que escolher a JL Soluções?</h2>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <span><strong>Foco Local:</strong> Entendemos a realidade de Aiuruoca e do Sul de Minas.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <span><strong>Atendimento Humanizado:</strong> Sem robôs. Você fala diretamente com quem resolve.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <span><strong>Tecnologia de Ponta:</strong> Usamos as mesmas ferramentas de grandes startups.</span>
-                    </li>
-                </ul>
+    <section id="sobre" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">Por que a JL Soluções?</h2>
+                <p class="text-gray-400 mb-6 text-lg">
+                    Sediados em <strong>Aiuruoca</strong>, entendemos as dificuldades de conexão e logística do Sul de Minas. 
+                    Nossa missão é levar a tecnologia das grandes capitais para os negócios locais, com atendimento humano e próximo.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
+                        <div class="text-2xl font-bold text-blue-400 mb-1">100%</div>
+                        <div class="text-sm text-gray-400">Foco Local</div>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
+                        <div class="text-2xl font-bold text-green-400 mb-1">24h</div>
+                        <div class="text-sm text-gray-400">Monitoramento</div>
+                    </div>
+                </div>
             </div>
-            <div class="md:w-1/2 md:pl-10">
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-                    <p class="italic text-gray-600 text-lg">"Nosso objetivo é transformar a gestão de produtores rurais e pousadas através da tecnologia, com simplicidade e eficiência."</p>
+            <div class="md:w-1/2 bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-2xl">
+                <div class="h-64 bg-gray-700 rounded-lg flex items-center justify-center flex-col text-gray-400">
+                    <i class="fas fa-map-marked-alt text-4xl mb-4"></i>
+                    <p>Atendendo Aiuruoca, Caxambu,<br>Baependi e Região</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900 mt-auto">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4">Pronto para modernizar seu negócio?</h2>
-            <p class="mb-8 text-gray-400">Atendemos Caxambu, Baependi, São Lourenço, Cruzília e Itamonte.</p>
-            <a href="https://wa.me/5532998417455" class="inline-block py-3 px-8 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg text-lg transition duration-300">
-                <i class="fab fa-whatsapp mr-2"></i>Falar com Consultor Agora
+            <h3 class="text-white text-2xl font-bold mb-4">Vamos conversar?</h3>
+            <p class="mb-8 max-w-lg mx-auto">Transforme seu negócio hoje. Clique no botão abaixo para falar direto comigo no WhatsApp.</p>
+            
+            <a href="https://wa.me/5532998417455" class="inline-flex items-center py-3 px-8 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full text-lg transition duration-300 shadow-lg hover:shadow-green-900/50 mb-12">
+                <i class="fab fa-whatsapp mr-2"></i> Iniciar Atendimento
             </a>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-sm text-gray-500">
-                <p>&copy; 2024 JL Soluções em TI e Desenvolvimento de Software. Todos os direitos reservados.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm border-t border-gray-800 pt-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-2">Contato</h4>
+                    <p>(32) 99841-7455</p>
+                    <p>Aiuruoca - MG</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-2">Serviços</h4>
+                    <p>Web Design</p>
+                    <p>Sistemas Web</p>
+                    <p>Automação</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-2">Área de Cobertura</h4>
+                    <p>Aiuruoca, Caxambu, Baependi</p>
+                    <p>São Lourenço, Itamonte, Cruzília</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-xs text-gray-600">
+                &copy; 2024 JL Soluções em TI. Todos os direitos reservados.
             </div>
         </div>
     </footer>
